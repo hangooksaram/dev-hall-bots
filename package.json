@@ -1,0 +1,23 @@
+{
+  "name": "dev-hall-bots",
+  "version": "1.0.0",
+  "description": "Manage Dev Hall Discord Server Bots",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./client/client.js && node index.js",
+    "deploy": "cd ./commandHandling && node deployCommands.js",
+    "watch": "nodemon index.js",
+    "dev": "concurrently \"npm start\" \"npm run watch\""
+  },
+  "author": "HyunJae Oh",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "discord.js": "^14.14.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "eslint": "^8.56.0",
+    "nodemon": "^3.0.2"
+  }
+}
